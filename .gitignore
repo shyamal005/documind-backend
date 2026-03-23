@@ -1,0 +1,10 @@
+# secrets
+.env
+
+# build files
+target/
+node_modules/
+
+# IDE
+.vscode/
+.idea/
