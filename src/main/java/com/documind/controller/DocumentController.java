@@ -30,6 +30,13 @@ public class DocumentController {
         return documentService.process(file);
     }
 
+    // 📄 Upload & parse
+    @PostMapping(value = "/upload", consumes = "multipart/form-data")
+public StructuredDocument upload(@RequestParam("file") MultipartFile file) throws Exception {
+    System.out.println("🔥 API HIT");
+    return documentService.process(file);
+}
+
     // 💬 Ask AI
     @PostMapping("/ask")
     public String ask(@RequestBody String query) {
