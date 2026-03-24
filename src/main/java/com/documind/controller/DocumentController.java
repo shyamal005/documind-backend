@@ -19,9 +19,15 @@ public class DocumentController {
     @Autowired
     private LLMService llmService;
 
+    @GetMapping("/test")
+    public String test() {
+    return "WORKING";
+    }
+
     // 📄 Upload & parse
     @PostMapping("/upload")
     public StructuredDocument upload(@RequestParam("file") MultipartFile file) throws Exception {
+         System.out.println("🔥 API HIT");
         return documentService.process(file);
     }
 
