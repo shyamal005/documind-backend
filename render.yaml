@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: documind-backend
+    runtime: java
+    buildCommand: mvn clean install
+    startCommand: java -jar target/documind-1.0.jar
